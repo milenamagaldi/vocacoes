@@ -273,3 +273,76 @@ footer {
   background-color: #3b2c59;
   color: white;
 }
+
+/* --- AJUSTES DE RESPONSIVIDADE GERAL --- */
+
+/* Garante que todas as imagens se ajustem ao tamanho da tela */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Faz o layout se adaptar a telas menores (celulares e tablets) */
+@media (max-width: 900px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #004080;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .banner {
+    width: 100%;
+    height: 250px;
+  }
+
+  .mensagem h2 {
+    font-size: 28px;
+  }
+
+  .mensagem p {
+    font-size: 16px;
+  }
+
+  .vocacao {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .vocacao:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .vocacao-img {
+    width: 90%;
+    height: auto;
+  }
+
+  .vocacao-texto {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
