@@ -202,3 +202,74 @@ footer {
     padding: 40px 20px;
   }
 }
+
+/* ----- PÁGINA VOCAÇÕES ----- */
+
+.titulo-pagina {
+  text-align: center;
+  color: #000000;
+  font-size: 40px;
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 18px;
+  color: #0f033a;
+  margin-bottom: 40px;
+}
+
+.conteudo-vocacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 0 40px 60px;
+}
+
+.vocacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.911);
+}
+
+.vocacao:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.vocacao-img {
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.vocacao-texto {
+  width: 60%;
+}
+
+.vocacao-texto h2 {
+  color: #3b2c59;
+  margin-bottom: 10px;
+}
+
+.vocacao-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b2c59;
+  color: white;
+}
