@@ -1,32 +1,43 @@
-/* ===== CONFIGURAÇÕES GERAIS ===== */
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ---------- BASE ---------- */
 body {
-  background-color: #004aad;
-  font-family: Arial, sans-serif;
-  color: white;
+  font-family: 'Arial', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* ===== CABEÇALHO ===== */
+/* ---------- HEADER ---------- */
 header {
-  background-color: #004aad;
+  background-color: #004080;
   color: white;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding: 15px 60px;
+  flex-wrap: wrap;
 }
 
-.logo h1 {
-  font-size: 28px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-/* ===== MENU ===== */
+.logo img {
+  width: 60px;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -37,75 +48,123 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #ffcc00;
 }
 
-/* ===== MENU HAMBÚRGUER ===== */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 4px 0;
-}
-
-/* ===== BANNER ===== */
+/* ---------- BANNER ---------- */
 .banner {
-  text-align: center;
-  padding: 40px 20px;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 
-.banner h2 {
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.mensagem {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.mensagem h2 {
   font-size: 40px;
-  margin-bottom: 20px;
 }
 
-.banner-img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+.mensagem p {
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-/* ===== RODAPÉ ===== */
+/* ---------- CONTEÚDO ---------- */
+.vocacoes {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.vocacoes h2 {
+  color: #004080;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  width: 250px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: #004080;
+  margin: 10px 0;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
-  background-color: #003380;
+  background-color: #004080;
+  color: white;
   text-align: center;
   padding: 15px;
-  font-size: 14px;
+  margin-top: 40px;
 }
 
-/* ===== AJUSTES PARA CELULAR ===== */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 900px) {
+  header {
     flex-direction: column;
-    background-color: #004aad;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
   }
 
-  nav ul.active {
-    display: flex;
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  .menu-toggle {
-    display: flex;
-  }
-
-  .banner h2 {
+  .mensagem h2 {
     font-size: 28px;
+  }
+
+  .mensagem p {
+    font-size: 16px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
   }
 }
